@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IndexedDB</title>
+    <style>
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        a {
+            margin: 10px 5px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-decoration: none;
+            color: deepskyblue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .links {
+            margin-bottom: 5px;
+        }
+        #log {
+            float: right;
+            border: 1px solid #000;
+            width: 210px;
+        }
+        .controlls {
+            margin-bottom: 5px;
+        }
+        #database {
+            border: 1px solid #000;
+            margin-bottom: 5px;
+        }
+        #founded, #diap {
+            border: 1px solid #000;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="log">
+        <span style="display: block; border-bottom: 1px solid #000;">Log:</span>
+    </div>
+    <div class="links">
+        <span style="display: block;">EN:</span><br>
+        <a href="https://www.tutorialspoint.com/html5/html5_indexeddb.htm">https://www.tutorialspoint.com/html5/html5_indexeddb.htm</a><br>
+        <a href="https://www.w3.org/TR/IndexedDB/">https://www.w3.org/TR/IndexedDB/</a><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBObjectStore#put()>">https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBObjectStore#put()></a><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase">https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase</a><br>
+
+        <span style="margin-top: 15px; display: block;">RU:</span><br>
+        <a href="https://proglib.io/p/indexeddb-guide/">lib https://proglib.io/p/indexeddb-guide/</a><br>
+        <a href="https://habr.com/post/213515/">https://habr.com/post/213515/</a><br>
+        <a href="https://developer.mozilla.org/ru/docs/IndexedDB/Using_IndexedDB">https://developer.mozilla.org/ru/docs/IndexedDB/Using_IndexedDB</a><br>
+        <a href="http://blog.websofter.ru/statja-o-tom-kak-ispolzovat-indexeddb-v-html5/">http://blog.websofter.ru/statja-o-tom-kak-ispolzovat-indexeddb-v-html5/</a><br>
+        <a href="http://densolow.com/entry/Local_databases_on_IndexedDB-3.html">http://densolow.com/entry/Local_databases_on_IndexedDB-3.html</a><br>
+        <a href="http://cultofdigits.com/dart-language/ispolzovanie-indexeddb/">http://cultofdigits.com/dart-language/ispolzovanie-indexeddb/</a><br>
+        <a href="https://php-academy.kiev.ua/blog/working-with-indexeddb">https://php-academy.kiev.ua/blog/working-with-indexeddb</a>
+    </div>
+    <div class="controlls">
+        <button id="addbtn">Add(Put)</button>
+        <label for="mytitle">title</label>
+        <input type="text" id="mytitle" value="MyTitle">
+        <label for="myauthor">author</label>
+        <input type="text" id="myauthor" value="NewAuthor">
+        <label for="myisbn">isbn</label>
+        <input type="text" id="myisbn" value="234123">
+    </div>
+    <div id="database"></div>
+    <div class="controlls">
+        <button id="searchbtn">Search</button>
+        <label for="mysearch">isbn</label>
+        <input type="text" id="mysearch" value="234123">
+        <button id="delbtn">Delete</button>
+        <label for="mydel">isbn</label>
+        <input type="text" id="mydel" value="234123">
+        <button id="clearbtn">Clear</button>
+        <button id="deldbbtn">DeleteDB</button>
+    </div>
+    <div id="founded">Not found</div>
+    <div class="controlls">
+        IDBKeyRange
+        <button id="diaphbtn">Search</button>
+        <label for="myfrom">From</label>
+        <input type="text" id="myfrom" value="123456">
+        <label for="myto">To</label>
+        <input type="text" id="myto" value="345678">
+    </div>
+    <div id="diap">Not found</div>
+<script src="index.js"></script>
+</body>
+</html>
