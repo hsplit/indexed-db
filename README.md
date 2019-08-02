@@ -1,4 +1,4 @@
-## Example of usage Indexed DB [Open in browser](https://hsplit.github.io/indexed-db)
+## Example of usage Indexed DB [Open in browser](https://hsplit.github.io/indexed-db/)
 
 ### Methods
 - Open DB
